@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">TheBucketListMobile8</string>
+  <string name="All">Home</string>
+  <string name="Profile">Profile</string>
+  <string name="Add">Add</string>
+
+  <string name="kategorija_prompt">Odaberi kategoriju</string>
+  <string-array name="kategorija_array">
+    <item>Travel</item>
+    <item>Sport</item>
+    <item>Education</item>
+    <item>Family</item>
+    <item>Extreme</item>
+    <item>Fun</item>
+    <item>Hobby</item>
+    <item>Career</item>
+    <item>Charity</item>
+  </string-array>
+</resources>
+

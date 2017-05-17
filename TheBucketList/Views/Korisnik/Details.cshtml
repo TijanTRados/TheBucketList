@@ -1,0 +1,216 @@
+﻿@using TheBucketList.Models
+@model TheBucketList.Models.KorisnikModel
+
+@{
+    ViewBag.Title = "User Details";
+}
+<div class="row">
+    <div class="col-md-6 col-md-offset-2">
+        <h2 class="text-center">
+            @Html.DisplayFor(model => model.FullName)
+        </h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-9 col-md-offset-2">
+        <hr class="margin-top-0" />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4 col-md-offset-3" style="padding-left:30px">
+        @{
+            var base64 = Convert.ToBase64String(Model.Slika);
+            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+        }
+        <img class="img-responsive center-block" style="width:300px;height:auto;object-fit:contain;" src="@imgSrc" />
+    </div>
+    <div class="col-md-5">
+
+        @Html.Partial("_UploadImage", new ImageViewModel())
+    </div>
+</div>
+
+<div class="row margin-top-20">
+    <div class="col-md-2 col-md-offset-3 text-center">
+        <strong>@Html.DisplayNameFor(model => model.Username):</strong>
+    </div>
+    <div class="col-md-2 text-center">
+        @Html.DisplayFor(model => model.Username)
+    </div>
+    <div class="col-md-2">
+        <label id="username" class="btn btn-link editUser" style="padding:0">Edit</label>
+        <input type="text" id="usernameInput" placeholder="Enter new username..." style="display:none">
+        <label id="usernameSubmit" class="btn btn-link updateUser" style="display:none">Save</label>
+        <label id="usernameCancel" class="btn btn-link cancelEditUser" style="display:none">Cancel</label>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-3 text-center">
+        <strong>@Html.DisplayNameFor(model => model.Lozinka):</strong>
+    </div>
+    <div class="col-md-2 text-center">
+        @Html.DisplayFor(model => model.Lozinka)
+    </div>
+    <div class="col-md-2">
+        <label id="lozinka" class="btn btn-link editUser" style="padding:0">Edit</label>
+        <input type="text" id="lozinkaInput" placeholder="Enter new password..." style="display:none">
+        <label id="lozinkaSubmit" class="btn btn-link" style="display:none">Save</label>
+        <label id="lozinkaCancel" class="btn btn-link cancelEditUser" style="display:none">Cancel</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-3 text-center">
+        <strong>@Html.DisplayNameFor(model => model.Ime):</strong>
+    </div>
+    <div class="col-md-2 text-center">
+        @Html.DisplayFor(model => model.Ime)
+    </div>
+    <div class="col-md-2">
+        <label id="ime" class="btn btn-link editUser" style="padding:0">Edit</label>
+        <input type="text" id="imeInput" placeholder="Enter new first name..." style="display:none">
+        <label id="imeSubmit" class="btn btn-link" style="display:none">Save</label>
+        <label id="imeCancel" class="btn btn-link cancelEditUser" style="display:none">Cancel</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-3 text-center">
+        <strong>@Html.DisplayNameFor(model => model.Prezime):</strong>
+    </div>
+    <div class="col-md-2 text-center">
+        @Html.DisplayFor(model => model.Prezime)
+    </div>
+    <div class="col-md-2">
+        <label id="prezime" class="btn btn-link editUser" style="padding:0">Edit</label>
+        <input type="text" id="prezimeInput" placeholder="Enter new last name..." style="display:none">
+        <label id="prezimeSubmit" class="btn btn-link" style="display:none">Save</label>
+        <label id="prezimeCancel" class="btn btn-link cancelEditUser" style="display:none">Cancel</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-3 text-center">
+        <strong>@Html.DisplayNameFor(model => model.Moto):</strong>
+    </div>
+    <div class="col-md-2 text-center">
+        @Html.DisplayFor(model => model.Moto)
+    </div>
+    <div class="col-md-2">
+        <label id="moto" class="btn btn-link editUser" style="padding:0">Edit</label>
+        <input type="text" id="motoInput" placeholder="Enter new motto..." style="display:none">
+        <label id="motoSubmit" class="btn btn-link" style="display:none">Save</label>
+        <label id="motoCancel" class="btn btn-link cancelEditUser" style="display:none">Cancel</label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-3 text-center">
+        <strong>@Html.DisplayNameFor(model => model.Opis):</strong>
+    </div>
+    <div class="col-md-2 text-center">
+        @Html.DisplayFor(model => model.Opis)
+    </div>
+    <div class="col-md-2">
+        <label id="opis" class="btn btn-link editUser" style="padding:0">Edit</label>
+        <input type="text" id="opisInput" placeholder="Enter new about me..." style="display:none">
+        <label id="opisSubmit" class="btn btn-link" style="display:none">Save</label>
+        <label id="opisCancel" class="btn btn-link cancelEditUser" style="display:none">Cancel</label>
+    </div>
+</div>
+
+<div class="row margin-top-20">
+    <div class="col-md-12 text-center">
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".editUser").click(function (event) {
+            $("#" + event.target.id + "Input").show();
+            $("#" + event.target.id + "Submit").show();
+            $("#" + event.target.id + "Cancel").show();
+            $(this).hide();
+
+        });
+
+    });
+    $(document).ready(function () {
+        $(".updateUser").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "usernameSubmit/?newUsername="+$("#usernameInput").val()
+            });
+            $(this).hide();
+            $(".editUser").show();
+            $("#usernameInput").hide();
+            location.reload();
+        });
+
+    });
+    $(document).ready(function () {
+        $(".cancelEditUser").click(function (event) {
+            location.reload();
+        });
+
+    });
+    $(document).ready(function () {
+        $("#lozinkaSubmit").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "lozinkaSubmit/?newLozinka=" + $("#lozinkaInput").val()
+            });
+            location.reload();
+        });
+
+    });
+    $(document).ready(function () {
+        $("#imeSubmit").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "imeSubmit/?newIme=" + $("#imeInput").val()
+            });
+            location.reload();
+        });
+
+    });
+    $(document).ready(function () {
+        $("#prezimeSubmit").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "prezimeSubmit/?newPrezime=" + $("#prezimeInput").val()
+            });
+            location.reload();
+        });
+
+    });
+    $(document).ready(function () {
+        $("#motoSubmit").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "motoSubmit/?newMoto=" + $("#motoInput").val()
+            });
+            location.reload();
+        });
+
+    });
+    $(document).ready(function () {
+        $("#opisSubmit").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "opisSubmit/?newOpis=" + $("#opisInput").val()
+            });
+            location.reload();
+        });
+
+    });
+
+
+</script>
+
+

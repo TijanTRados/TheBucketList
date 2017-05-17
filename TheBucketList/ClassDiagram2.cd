@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TheBucketList.Models.RegisterViewModel">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACIBAAAABAAAAAAAAAAAAAACAAAAAAgAIAA=</HashCode>
+      <FileName>Models\AccountViewModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheBucketList.Models.BucketItemModel">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAQAAAABAAABAAAACAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BucketItemModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kategorija" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="TheBucketList.Models.BucketItemsModel">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\BucketItemsModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BucketItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TheBucketList.Models.KorisnikModel">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAAIBAIAABQAgACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\KorisnikModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheBucketList.NHibernate.Entities.BucketItem">
+    <Position X="0.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQAAAABAAABAAAACAAQAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>NHibernate\Entities\BucketItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TheBucketList.NHibernate.Entities.Kategorija">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NHibernate\Entities\Kategorija.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BucketItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="TheBucketList.NHibernate.Entities.Korisnik">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAQQAAIBAAAABQAgACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NHibernate\Entities\Korisnik.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BucketItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

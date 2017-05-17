@@ -1,0 +1,16 @@
+﻿@model TheBucketList.Models.ImageViewModel
+
+
+
+
+Change profile picture...
+    @using (Html.BeginForm("ChangeImage", "Korisnik", FormMethod.Post,
+                                           new { enctype = "multipart/form-data" }))
+    {   
+            @Html.ValidationSummary(true)
+            @Html.TextBoxFor(model => model.File, new { type = "file", accept = "image/*", style="margin-top:10px" });
+            @Html.ValidationMessageFor(model => model.File);   
+        <input type="submit" value="Upload" class="btn btn-link" style="padding:0;margin-top:10px"/>
+    }
+        
+

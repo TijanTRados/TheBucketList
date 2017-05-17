@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/scrollView1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:background="@android:color/holo_green_light"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayout1">
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:layout_width="match_parent"
+            p1:hint="Korisničko ime"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/txtUsernameReg" />
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:layout_width="match_parent"
+            p1:hint="Lozinka"
+            p1:layout_height="wrap_content"
+            p1:inputType="textVisiblePassword"
+            p1:id="@+id/txtZaporkaReg" 
+            />
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:layout_width="match_parent"
+            p1:hint="Ponovi lozinku"
+            p1:layout_height="wrap_content"
+            p1:inputType="textVisiblePassword"
+            p1:id="@+id/txtPonoviReg" />
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:layout_width="match_parent"
+            p1:hint="Ime"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/txtImeReg" />
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:layout_width="match_parent"
+            p1:hint="Prezime"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/txtPrezimeReg" />
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:layout_width="match_parent"
+            p1:hint="Moto"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/txtMotoReg" />
+        <EditText
+            p1:theme="@android:style/Theme.Material"
+            p1:inputType="textMultiLine"
+            p1:layout_width="match_parent"
+            p1:hint="O meni:"
+            p1:layout_height="wrap_content"
+            p1:lines="4"
+            p1:id="@+id/txtOMeniReg" />
+        <Button
+            p1:theme="@android:style/Theme.Material"
+            p1:text="Odaberi sliku"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnSlika" />
+        <ImageView
+            p1:theme="@android:style/Theme.Material"
+            p1:src="@android:drawable/ic_menu_gallery"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imgReg" />
+        <Button
+            p1:theme="@android:style/Theme.Material"
+            p1:text="Registriraj se!"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnReg" />
+    </LinearLayout>
+</ScrollView>

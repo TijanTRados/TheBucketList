@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:background="@android:color/holo_green_light"
+    p1:weightSum="100"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent">
+    <ImageView
+        p1:src="@drawable/icon"
+        p1:layout_width="match_parent"
+        p1:layout_height="120.0dp"
+        p1:id="@+id/imageView1"
+        p1:layout_marginBottom="59.3dp"
+        p1:layout_marginTop="88.0dp" />
+    <EditText
+        p1:theme="@android:style/Theme.Material"
+        p1:layout_width="315.0dp"
+        p1:layout_height="49.3dp"
+        p1:id="@+id/editText1"
+        p1:maxLines="1"
+        p1:layout_marginLeft="21.0dp"
+        p1:layout_marginRight="21.0dp"
+        p1:hint="Username" />
+    <EditText
+        p1:theme="@android:style/Theme.Material"
+        p1:layout_width="315.0dp"
+        p1:layout_height="44.0dp"
+        p1:id="@+id/editText2"
+        p1:password="true"
+        p1:maxLines="1"
+        p1:layout_marginLeft="21.0dp"
+        p1:layout_marginRight="21.0dp"
+        p1:hint="Password"
+        p1:inputType="textVisiblePassword" />
+    <Button
+        p1:theme="@android:style/Theme.Material"
+        p1:text="Login"
+        p1:layout_width="315.0dp"
+        p1:layout_height="47.7dp"
+        p1:id="@+id/button1"
+        p1:layout_marginLeft="21.0dp"
+        p1:layout_marginRight="21.0dp"
+        p1:background="@android:color/holo_green_dark"
+        p1:layout_marginTop="18.0dp"
+        p1:textColor="@android:color/white" />
+    <Button
+        p1:text="Register"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/button2"
+        p1:background="@android:color/transparent"
+        p1:layout_marginLeft="154.2dp"
+        p1:layout_marginTop="14.8dp"
+        p1:textColor="@android:color/background_light" />
+</LinearLayout>

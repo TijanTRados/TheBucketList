@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:background="@android:color/holo_green_light"
+    p1:weightSum="100"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent">
+  <EditText
+      p1:theme="@android:style/Theme.Material"
+      p1:layout_width="315.0dp"
+      p1:layout_height="49.3dp"
+      p1:id="@+id/naslovText"
+      p1:maxLines="1"
+      p1:layout_marginLeft="38.5dp"
+      p1:layout_marginRight="21.0dp"
+      p1:hint="Naslov"
+      p1:layout_marginTop="15.5dp" />
+  <ImageView
+      p1:src="@android:drawable/ic_menu_gallery"
+      p1:layout_width="match_parent"
+      p1:layout_height="90.0dp"
+      p1:id="@+id/slikaView"
+      p1:layout_marginTop="3.5dp" />
+  <Button
+      p1:theme="@android:style/Theme.Material"
+      p1:text="Odaberi sliku"
+      p1:layout_width="315.0dp"
+      p1:layout_height="47.7dp"
+      p1:id="@+id/odaberiButton"
+      p1:background="@android:color/holo_green_dark"
+      p1:textColor="@android:color/white"
+      p1:layout_marginLeft="40.0dp"
+      p1:layout_marginRight="8.5dp"
+      p1:layout_marginTop="7.0dp" />
+  <EditText
+      p1:inputType="textMultiLine"
+      p1:theme="@android:style/Theme.Material"
+      p1:layout_width="315.0dp"
+      p1:layout_height="92.5dp"
+      p1:id="@+id/opisText"
+      p1:password="true"
+      p1:maxLines="1"
+      p1:layout_marginLeft="40.5dp"
+      p1:layout_marginRight="21.0dp"
+      p1:hint="Opis"
+      p1:layout_marginTop="9.0dp" />
+  <Spinner
+      p1:theme="@android:style/Theme.Material"
+      p1:layout_width="315.0dp"
+      p1:layout_height="47.7dp"
+      p1:id="@+id/spinner1"
+      p1:background="@android:color/holo_green_dark"
+      p1:textColor="@android:color/white"
+      p1:text="Kategorija"
+      p1:layout_marginLeft="40.0dp"
+      p1:layout_marginRight="8.5dp"
+      p1:layout_marginTop="7.0dp" />
+  <Button
+      p1:theme="@android:style/Theme.Material"
+      p1:text="Spremi"
+      p1:layout_width="315.0dp"
+      p1:layout_height="47.7dp"
+      p1:id="@+id/spremiButton"
+      p1:background="@android:color/holo_green_dark"
+      p1:textColor="@android:color/white"
+      p1:layout_marginLeft="40.0dp"
+      p1:layout_marginRight="8.5dp"
+      p1:layout_marginTop="7.0dp" />
+  <Button
+      p1:theme="@android:style/Theme.Material"
+      p1:text="Odustani"
+      p1:layout_width="315.0dp"
+      p1:layout_height="47.7dp"
+      p1:id="@+id/odustaniButton"
+      p1:background="@android:color/holo_green_dark"
+      p1:textColor="@android:color/white"
+      p1:layout_marginLeft="40.0dp"
+      p1:layout_marginRight="8.5dp"
+      p1:layout_marginTop="7.0dp" />
+</LinearLayout>

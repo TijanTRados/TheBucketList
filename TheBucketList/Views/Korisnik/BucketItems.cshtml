@@ -1,0 +1,112 @@
+﻿@model TheBucketList.Models.BucketItemsModel
+@using TheBucketList.NHibernate.Entities
+@{
+    ViewBag.Title = "BucketItems";
+}
+
+@{ 
+    Korisnik korisnik = (Korisnik)Session["User"];
+}
+
+<div class="row" style="background-color:lightgray;height:250px;margin-top:20px">
+    <div class="col-md-2 col-md-offset-1" style="margin-top:30px">
+        <p><strong>@korisnik.Ime @korisnik.Prezime</strong></p>
+        <p><strong>Moto:</strong>@korisnik.Moto</p>
+    </div>
+    <div class="col-md-4 col-md-offset-1">
+        @{
+            
+            var base64Korisnik = Convert.ToBase64String(korisnik.Slika);
+            var imgSrcKorisnik = String.Format("data:image/gif;base64,{0}", base64Korisnik);
+        }
+        <img class="img-responsive center-block" style="width:250px;height:250px;overflow: hidden;object-fit:contain;border-radius: 50%;" src="@imgSrcKorisnik" />
+    </div>
+    <div class="col-md-2 col-md-offset-1" style="margin-top:30px">
+        <p><strong>Opis:</strong> @korisnik.Opis</p>
+        
+    </div>
+</div>
+
+@foreach (var bucketItem in Model.BucketItems)
+{
+    <div class="row">
+        <hr />
+
+        <div class="col-md-1 col-md-offset-1">
+            <a href="@Url.Action("ChangeBucketItem", "Korisnik", new { itemId = bucketItem.Id })">
+                <img src="~/Content/Images/changeBucketItem.PNG" class="img-responsive margin-top-20 imgHover bucketItemChange"
+                     style="width:30px;height:30px" title="Change bucket item." data-bucketId="@bucketItem.Id" />
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            @{
+                if (bucketItem.Slika != null)
+                {
+                    var base64 = Convert.ToBase64String(bucketItem.Slika);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <img class="img-responsive center-block" style="width:400px;height:auto;object-fit:contain;margin-top:20px" src="@imgSrc" />
+                }
+            }
+            
+        </div>
+        <div class="col-md-4">
+            <h2>
+                @bucketItem.Ime @if (bucketItem.Ostvareno)
+                {
+                    <label>(Completed)</label>
+                }
+                else
+                {
+                    <label>(Not Completed)</label>
+                }
+            </h2>
+            <p>@bucketItem.Opis</p>
+            <p>Category: @bucketItem.KategorijaNaziv</p>
+        </div>
+        <div class="col-md-1" style="margin-left:0px;padding-left:0px;padding-right:0px">
+            @if (bucketItem.Ostvareno)
+            {
+                <img src="~/Content/Images/completed.PNG" class="img-responsive margin-top-20"
+                     style="width:30px;height:30px" title="Item completed." />
+            }
+            else
+            {
+                <img src="~/Content/Images/notCompleted.PNG" class="img-responsive margin-top-20"
+                     style="width:30px;height:30px" title="Item in progress." />
+            }
+        </div>
+        <div class="col-md-1" style="margin-left:0px;padding-left:0px;margin-top:20px">
+            @if (bucketItem.Ostvareno)
+            {
+                <label class="btn btn-link changeOstvareno" changeTo="nijeOstvareno"
+                       data-bucketId="@bucketItem.Id" style="padding:0">Set "In progress"</label>
+            }
+            else
+            {
+                <label class="btn btn-link changeOstvareno" changeTo="ostvarenoJe"
+                       data-bucketId="@bucketItem.Id" style="padding:0">Set "Complete"</label>
+            }
+        </div>
+    </div>
+                }
+
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".changeOstvareno").click(function (event) {
+            $.ajax({
+                type: "GET",
+                url: "changeOstvareno/?ostvareno=" + $(this).attr('changeTo') +
+                    "&bucketItemId=" + $(this).attr('data-bucketId')
+
+            });
+            location.reload();
+        });
+
+    });
+
+</script>

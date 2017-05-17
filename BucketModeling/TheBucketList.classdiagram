@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="2bddf7d5-5711-4839-84d9-1683c5865cab" name="TheBucketList" linkedPackageId="0c5eb5e2-8684-4e33-8185-567ce8d450d2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="eb07e1ed-9d67-4a0a-b61b-25ad7292a04a">
+      <profileInstance Id="379cc04c-3874-4dec-b980-778ba87c9edb" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="899408ec-fe8e-4915-b8f7-1230716cb00f">
+      <profileInstance Id="1926e1d7-3b1d-47c1-8c79-25d43a74f915" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <package Id="0c5eb5e2-8684-4e33-8185-567ce8d450d2" name="BucketModeling">
+    <elementDefinition Id="e0fbd657-3c61-4b67-a029-76ad2cb31283" />
+  </package>
+</logicalClassDesignerModel>
